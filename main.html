@@ -10,7 +10,19 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			
+			let x=Number.NEGATIVE_INFINITY;
+			for(let ele of arr){
+				if(ele>x){
+					x=ele;
+				}
+			}
+			let ans=Number.NEGATIVE_INFINITY;
+			for(let ele of arr){
+				if(ele>ans && x!=ele){
+					ans=ele;
+				}
+			}
+			return ans;
 		}
 
 		function Main() {
@@ -21,7 +33,7 @@
 			}
 			alert(secondHighest(arr));
 		}
-		Main();
+		// Main();
 	</script>
 
     <script type="text/javascript" src="./script.js">
